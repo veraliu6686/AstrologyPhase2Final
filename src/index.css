@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins'\"");
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  min-height: 100vh;
+  background-color: rgb(127, 135, 226);
+  background-image:
+  radial-gradient(closest-side, rgba(121, 82, 221,1),rgba(121, 82, 221, 0)),
+  radial-gradient(closest-side, rgba(224, 127, 226,1),rgba(224, 127, 226, 0)),
+  radial-gradient(closest-side, rgba(127, 96, 229,1), rgba(74, 87, 227, 0)),
+  radial-gradient(closest-side, rgba(222, 156, 219, 1),rgba(222, 156, 219, 0)),
+  radial-gradient(closest-side, rgba(73, 66, 116, 1),rgba(73, 66, 116, 0));
+  background-size:
+  130vmax 130vmax,
+  80vmax 80vmax,
+  90vmax 90vmax,
+  110vmax 110vmax,
+  90vmax 90vmax;
+  background-position:
+  -80vmax -80vmax,
+  60vmax -30vmax,
+  10vmax 10vmax,
+  -30vmax -10vmax,
+  50vmax 50vmax;
+  background-repeat: no-repeat;
+  animation: movement 5s linear infinite;
+}
+body::after{
+  content: "";
+  display: block;
+  position : fixed;
+  width: 100%;
+  height: 100%;
+  top : 0;
+  left: 0;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  z-index: -1;
+}
+
+@keyframes movement{
+  0%, 100%{
+    background-size:
+    130vmax 130vmax,
+    80vmax 80vmax,
+    90vmax 90vmax,
+    110vmax 110vmax,
+    90vmax 90vmax;
+    background-position:
+    -80vmax -80vmax,
+    60vmax -30vmax,
+    10vmax 10vmax,
+    -30vmax -10vmax,
+    50vmax 50vmax;
+  }
+  25%{
+    background-size:
+    100vmax 100vmax,
+    90vmax 90vmax,
+    100vmax 100vmax,
+    90vmax 90vmax,
+    60vmax 60vmax;
+    background-position:
+    -60vmax -90vmax,
+    50vmax -40vmax,
+    0vmax -20vmax,
+    -40vmax -20vmax,
+    40vmax 60vmax;
+  }
+  50%{
+    background-size:
+    80vmax 80vmax,
+    110vmax 110vmax,
+    80vmax 80vmax,
+    60vmax 60vmax,
+    80vmax 80vmax;
+    background-position:
+    -50vmax -70vmax,
+    40vmax -30vmax,
+    10vmax 0vmax,
+    20vmax 10vmax,
+    30vmax 70vmax;
+  }
+  75%{
+    background-size:
+    90vmax 90vmax,
+    90vmax 90vmax,
+    100vmax 100vmax,
+    90vmax 90vmax,
+    70vmax 70vmax;
+    background-position:
+    -50vmax -40vmax,
+    50vmax -30vmax,
+    20vmax 0vmax,
+    -10vmax 10vmax,
+    40vmax 60vmax;
+  }
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.background {
+  min-width: 800px;
+  margin: 0;
+  /* height: 100vh; */
+  object-fit: cover;
+  display: relative;
+  z-index: -1;
+}
+
+.navbar {
+  /* border : 2px red solid; */
+  grid-area: navbar;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  align-items: center;
+  justify-items: center;
+  background-color: white;
+  padding: 25px;
+}
+
+.nav-item{
+color: whitesmoke;
+padding: 8px 18px;
+letter-spacing: 2px;
+border-radius: 15px ;
+background: linear-gradient(90deg,violet, rgb(207, 132, 222), rgb(140, 76, 222));
+}
+
+.nav-item:hover{
+animation: scale 1s ease-in ;
+color: purple;
+}
+@keyframes scale {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+#headerContiner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#headerTop{
+  color: white;
+  font-size: 90px;
+  position: relative;
+  /* max-width: 906.49px; */
+}
+#headerTop::after{
+  text-align: center;
+  content: 'ASTROLOGY FOR ALL';
+  color: transparent;
+  position: absolute;
+  align-items: center;
+  top : 0;
+  left : 0;
+  background : linear-gradient( to right, rgb(80, 22, 89), rgb(149, 110, 215), rgb(52, 28, 187), rgb(83, 19, 114), purple,rgb(139, 104, 191)) ;
+  background-clip: text;
+  -webkit-background-clip: text;
+  clip-path: circle(50px at 0% 50%);
+  animation: headerLight 5s infinite;
+}
+
+@keyframes headerLight{
+  0%{
+    clip-path: circle(100px at 0% 50%);
+  }
+  50%{
+    clip-path: circle(100px at 100% 50%);
+  }
+  100%{
+    clip-path: circle(100px at 0% 50%);
+  }
+}
+.reviewSec{
+  /* border:2px brown solid; */
+  padding: 10px;
+  max-width: 500px;
+  min-height: 600PX;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.reviewSec:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.description{
+  color:white;
+  /* display: inline; */
+}
+
+.descript{
+  color:white;
+  font-size: large;
+}
+.label{
+  color:white;
+}
+.header{
+  color:white;
+}
+.review{
+  color:white;
+  width: 200px;
+}
+.title{
+  color:white;
+  text-align: center;
+}
+.search{
+  text-align: center;
+  position: relative;
+}
+
+.line{
+  padding-top: 30px;
+  border-top: 0;
+  border-left: 0 ;
+  border-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+}
+
+.error-page{
+  /* border: 2px red solid; */
+  position: relative;
+  margin : 80px 60px 120px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  min-height: 400px;
+}
+.error-page:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.error-page .content{
+  max-width: 600px;
+  text-align: center;
+}
+
+.content h1{
+  font-size: 18vw;
+  line-height: 1em;
+  position: relative;
+  color:  rgb(207, 132, 222);
+  text-shadow: 1px 5px 2px;
+  animation: animate 5s infinite
+}
+
+  .content h1:after{
+  position: absolute;
+  content: attr(data-text);
+  top:0;
+  left: 0;
+  right: 0;
+  color:rgba(255,255,255,0.25);
+  text-shadow: 1px 5px 2px;
+
+}
+
+@keyframes animate  {
+  0%  {color:rgb(207, 132, 222); }
+  25% {color:rgb(222, 100, 222);}
+  50% {color: rgb(140, 76, 222); }
+  75% {color:rgb(222, 100, 222); }
+  100% {color:rgb(207, 132, 222); }
+}
+
+.content h4{
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: rgb(196, 112, 196);
+  text-shadow: 1px 2px 2px;
+  max-width: 600px;
+  font-size: 2em;
+}
+
+.content #btn {
+  margin: 30px;
+}
+#btn:hover{
+  box-shadow: 0 8px 16px 0 rgba(196, 112, 196.02);;
+}
+.content #btn a{
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+}
